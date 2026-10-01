@@ -1,0 +1,5 @@
+services:
+  app:
+    image: registry.gitlab.com/lopmad/lopm-portfolio
+    ports:
+      - "127.0.0.1:5001:80"
