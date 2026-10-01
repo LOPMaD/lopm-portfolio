@@ -2,10 +2,5 @@ build-job:
   stage: build
   script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
-
-
-deploy-job:
-  stage: deploy
-  script:
     - docker build -t registry.gitlab.com/lopmad/lopm-portfolio .
     - docker push registry.gitlab.com/lopmad/lopm-portfolio
