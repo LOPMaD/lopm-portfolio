@@ -3,3 +3,8 @@ services:
     image: registry.gitlab.com/lopmad/lopm-portfolio
     ports:
       - "127.0.0.1:5001:80"
+  
+  odineye:
+    image: registry.gitlab.com/lopmad/lopm-portfolio/odin-eye
+    ports:
+      - "127.0.0.1:5002:5000"
