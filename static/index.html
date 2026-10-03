@@ -1,11 +1,109 @@
 <!doctype html>
-<html lang="ru">
+<html lang="uk">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>lopm.space</title>
+  <title>Artem Pashkan — DevOps & Security</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>In Development</h1>
+  <header>
+    <h1>Artem Pashkan</h1>
+    <p class="role">DevOps · Cyber Security</p>
+    <nav>
+      <a href="https://github.com/LOPMaD">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Про мене</h2>
+      <p>Я розвиваюся в напрямках DevOps та Cyber Security. Вмію встановлювати сканери вразливостей,
+        автоматизувати розгортання інфраструктури за допомогою Ansible та маю навички з GitLab CI.</p>
+    </section>
+
+    <section>
+      <h2>Досвід</h2>
+      <article class="card">
+        <h3>Security Operations Center Analyst</h3>
+        <p>Nova Digital · Full-time</p>
+        <p class="muted">Oct 2025 – May 2026 · 8 mos · Kyiv, Ukraine · On-site</p> 
+      </article>
+    </section>
+
+    <section>
+      <h2>Про цей сайт</h2>
+      <p>Цей сайт — теж частина портфоліо. Усе на цьому VPS налаштовано автоматично:</p>
+      <ul>
+        <li>сервер розгортається Ansible-ролями;</li>
+        <li>SSL-сертифікати отримуються через certbot;</li>
+        <li>проєкти працюють у контейнерах, образи зберігаються в GitLab Container Registry;</li>
+        <li>збирання та деплой виконує GitLab CI.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Проєкти</h2>
+      <article class="card">
+        <h3>OdinEye</h3>
+        <p>Простий RDAP-пошук інформації про IP-адреси.</p>
+        <p class="links">
+          <a href="https://todo.lopm.space">Відкрити демо</a>
+          <a href="https://github.com/LOPMaD/OdinEye">Репозиторій</a>
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Навички</h2>
+      <div class="skills">
+        <div>
+          <h3>Source & Delivery</h3>
+          <ul>
+            <li>Git</li>
+            <li>GitLab CI</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Automation</h3>
+          <ul>
+            <li>Ansible</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Containers</h3>
+          <ul>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Cyber Security</h3>
+          <ul>
+            <li>Firewall</li>
+            <li>Web Application Firewall</li>
+            <li>Wazuh</li>
+            <li>Qualys</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Cloud</h3>
+          <ul>
+            <li>Amazon Web Services</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Сертифікати</h2>
+      <div data-iframe-width="150" data-iframe-height="270"
+        data-share-badge-id="437588e7-4c17-485f-af00-338b1a942732"
+        data-share-badge-host="https://www.credly.com"></div>
+      <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+    </section>
+  </main>
 </body>
+
 </html>
