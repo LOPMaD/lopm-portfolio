@@ -8,3 +8,10 @@ services:
     image: registry.gitlab.com/lopmad/lopm-portfolio/odin-eye
     ports:
       - "127.0.0.1:5002:5000"
+  
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:5003:3000'
