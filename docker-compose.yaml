@@ -14,10 +14,23 @@ services:
     container_name: node_exporter
     command:
       - '--path.rootfs=/host'
+      - '--web.listen-address=:9001'
     pid: host
     restart: unless-stopped
     volumes:
       - '/:/host:ro,rslave'
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 127.0.0.1:5003:3000
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=grafana
+    volumes:
+      - ./grafana:/etc/grafana/provisioning/datasources
 
   prometheus:
     image: prom/prometheus
@@ -30,17 +43,20 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
-  grafana:
-    image: grafana/grafana
-    container_name: grafana
+
+  cadvisor:
+    image: ghcr.io/google/cadvisor:latest
+    container_name: cadvisor
+    command:
+      - '-port=9002'
     ports:
-      - 127.0.0.1:5003:3000
-    restart: unless-stopped
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=grafana
+    - 127.0.0.1:5005:8080
     volumes:
-      - ./grafana:/etc/grafana/provisioning/datasources
+      - volume=/:/rootfs:ro 
+      - volume=/var/run:/var/run:ro 
+      - volume=/sys:/sys:ro 
+      - volume=/var/lib/docker/:/var/lib/docker:ro 
+      - volume=/dev/disk/:/dev/disk:ro 
 volumes:
   prom_data:
 
