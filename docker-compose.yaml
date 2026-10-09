@@ -52,11 +52,11 @@ services:
     ports:
     - 127.0.0.1:5005:9002
     volumes:
-      - volume=/:/rootfs:ro 
-      - volume=/var/run:/var/run:ro 
-      - volume=/sys:/sys:ro 
-      - volume=/var/lib/docker/:/var/lib/docker:ro 
-      - volume=/dev/disk/:/dev/disk:ro 
+      - /:/rootfs:ro 
+      - /var/run:/var/run:ro 
+      - /sys:/sys:ro 
+      - /var/lib/docker/:/var/lib/docker:ro 
+      - /dev/disk/:/dev/disk:ro 
 volumes:
   prom_data:
 
