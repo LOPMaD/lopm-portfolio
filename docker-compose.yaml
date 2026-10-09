@@ -50,7 +50,7 @@ services:
     command:
       - '-port=9002'
     ports:
-    - 127.0.0.1:5005:8080
+    - 127.0.0.1:5005:9002
     volumes:
       - volume=/:/rootfs:ro 
       - volume=/var/run:/var/run:ro 
