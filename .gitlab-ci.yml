@@ -2,7 +2,7 @@ build-job:
   stage: build
   script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
-    - docker run --rm -v ./prometheus:/etc/prometheus prom/prometheus promtool check config /etc/prometheus/prometheus.yml
+    - docker run --rm --entrypoint promtool -v ./prometheus:/etc/prometheus prom/prometheus check config /etc/prometheus/prometheus.yml
     - docker build -t registry.gitlab.com/lopmad/lopm-portfolio .
     - docker push registry.gitlab.com/lopmad/lopm-portfolio
     - docker build -t registry.gitlab.com/lopmad/lopm-portfolio/odin-eye https://github.com/LOPMaD/OdinEye.git#main
