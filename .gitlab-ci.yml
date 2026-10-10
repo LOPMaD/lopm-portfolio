@@ -1,0 +1,10 @@
+build-job:
+  stage: build
+  script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+    - docker build -t registry.gitlab.com/lopmad/lopm-portfolio .
+    - docker push registry.gitlab.com/lopmad/lopm-portfolio
+    - docker build -t registry.gitlab.com/lopmad/lopm-portfolio/odin-eye https://github.com/LOPMaD/OdinEye.git#main
+    - docker push registry.gitlab.com/lopmad/lopm-portfolio/odin-eye
+    - docker compose up -d
+
