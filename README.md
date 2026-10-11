@@ -1,4 +1,5 @@
 # lopm-portfolio
+<img width="1103" height="912" alt="image" src="https://github.com/user-attachments/assets/c8160ee5-f026-4b79-9625-e14927671554" />
 
 **Live:** [lopm.space](https://lopm.space)
 
@@ -72,6 +73,7 @@ Prometheus is given its config listing the exporters it scrapes: cAdvisor and no
 - **cAdvisor** collects metrics per container, to see what happened to a container, what the load situation was, and whether a container may need more resources.
 
 ## Monitoring
+<img width="1523" height="729" alt="image" src="https://github.com/user-attachments/assets/bb06cc60-231e-4991-8adb-89db2037eb58" />
 
 The monitoring stack (Grafana, Prometheus, cAdvisor, node-exporter) runs in the same compose file. Prometheus scrapes the exporters and stores the metrics, Grafana visualizes them.
 
