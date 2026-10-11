@@ -12,96 +12,152 @@
   <header>
     <h1>Artem Pashkan</h1>
     <p class="role">DevOps · Cyber Security</p>
+
+    <p class="about">My name is Artem, I'm 21 years old. I have a background in cybersecurity and I'm now building on it in DevOps, aiming for a DevSecOps role.</p>
+
+    <h3>Contact</h3>
+    <p><a href="mailto:artempaskan349@gmail.com">artempaskan349@gmail.com</a></p>
+
+    <h3>Links</h3>
     <nav>
       <a href="https://github.com/LOPMaD">GitHub</a>
+      <a href="https://gitlab.com/LOPMaD">GitLab</a>
+      <a href="https://www.linkedin.com/in/artem-pashkan-178746357/">LinkedIn</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Про мене</h2>
-      <p>Я розвиваюся в напрямках DevOps та Cyber Security. Вмію встановлювати сканери вразливостей,
-        автоматизувати розгортання інфраструктури за допомогою Ansible та маю навички з GitLab CI.</p>
-    </section>
 
     <section>
-      <h2>Досвід</h2>
-      <article class="card">
+      <h2>Experience</h2>
+    
+      <article class="job">
         <h3>Security Operations Center Analyst</h3>
-        <p>Nova Digital · Full-time</p>
-        <p class="muted">Oct 2025 – May 2026 · 8 mos · Kyiv, Ukraine · On-site</p> 
+        <p class="job-meta">Nova Digital · Full-time</p>
+        <p class="job-meta">Oct 2025 – May 2026 · 8 mos · Kyiv, Ukraine · On-site</p>
+        <ul>
+          <li>Incident Response: phishing investigation, malware analysis.</li>
+          <li>SIEM Management: Splunk log analysis and alert triage.</li>
+          <li>Network Security: IP investigation and blocking via Cloudflare and Cloud Armor.</li>
+        </ul>
       </article>
     </section>
 
     <section>
-      <h2>Про цей сайт</h2>
-      <p>Цей сайт — теж частина портфоліо. Усе на цьому VPS налаштовано автоматично:</p>
-      <ul>
-        <li>сервер розгортається Ansible-ролями;</li>
-        <li>SSL-сертифікати отримуються через certbot;</li>
-        <li>проєкти працюють у контейнерах, образи зберігаються в GitLab Container Registry;</li>
-        <li>збирання та деплой виконує GitLab CI.</li>
-      </ul>
-    </section>
+      <h2>Projects</h2>
 
-    <section>
-      <h2>Проєкти</h2>
-      <article class="card">
+      <article class="project">
+        <h3>Self-hosted Infrastructure (Ansible)</h3>
+        <p class="project-desc">Automated provisioning of a VPS with Ansible roles: server hardening, Docker, Nginx reverse proxy with TLS, and a Prometheus + Grafana monitoring stack. Secrets kept out of the repo via CI/CD variables.</p>
+        <p class="project-links">
+          <a href="https://github.com/LOPMaD/infra-lopm-portfolio">GitHub</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Portfolio Site & CI/CD (lopm.space)</h3>
+        <p class="project-desc">This site, deployed through a GitLab CI pipeline: build, security scan (Gitleaks), image push to the registry, and automated deploy to the VPS.</p>
+        <p class="project-links">
+          <a href="https://github.com/LOPMaD/lopm-portfolio">GitHub</a>
+        </p>
+      </article>
+
+      <article class="project">
         <h3>OdinEye</h3>
-        <p>Простий RDAP-пошук інформації про IP-адреси.</p>
-        <p class="links">
-          <a href="https://containers.lopm.space">Відкрити демо</a>
-          <a href="https://github.com/LOPMaD/OdinEye">Репозиторій</a>
+        <p class="project-desc">A simple RDAP lookup tool for IP addresses. Python web app running in a Docker container.</p>
+        <p class="project-links">
+          <a href="https://containers.lopm.space">Live demo</a>
+          <a href="https://github.com/LOPMaD/OdinEye">GitHub</a>
         </p>
       </article>
     </section>
 
     <section>
-      <h2>Навички</h2>
-      <div class="skills">
-        <div>
-          <h3>Source & Delivery</h3>
+      <h2>Skills</h2>
+    
+      <div class="skills-domain">
+        <h3>DevOps</h3>
+    
+        <div class="skills-group">
+          <h4>CI/CD</h4>
           <ul>
-            <li>Git</li>
             <li>GitLab CI</li>
+            <li>GitLab Runner</li>
+            <li>Gitleaks</li>
           </ul>
         </div>
-        <div>
-          <h3>Automation</h3>
+    
+        <div class="skills-group">
+          <h4>Containers & Deployment</h4>
           <ul>
+            <li>Docker</li>
             <li>Ansible</li>
           </ul>
         </div>
-        <div>
-          <h3>Containers</h3>
+    
+        <div class="skills-group">
+          <h4>Web & Cloud</h4>
           <ul>
-            <li>Docker</li>
+            <li>Nginx</li>
+            <li>AWS</li>
           </ul>
         </div>
-        <div>
-          <h3>Cyber Security</h3>
+    
+        <div class="skills-group">
+          <h4>Monitoring</h4>
           <ul>
-            <li>Firewall</li>
-            <li>Web Application Firewall</li>
-            <li>Wazuh</li>
-            <li>Qualys</li>
+            <li>Prometheus</li>
+            <li>Grafana</li>
+            <li>Node Exporter</li>
+            <li>cAdvisor</li>
           </ul>
         </div>
-        <div>
-          <h3>Cloud</h3>
+      </div>
+    
+      <div class="skills-domain">
+        <h3>Security</h3>
+    
+        <div class="skills-group">
+          <h4>SIEM</h4>
           <ul>
-            <li>Amazon Web Services</li>
+            <li>Splunk</li>
           </ul>
         </div>
+    
+        <div class="skills-group">
+          <h4>XDR / EDR</h4>
+          <ul>
+            <li>CrowdStrike Falcon</li>
+          </ul>
+        </div>
+    
+        <div class="skills-group">
+          <h4>Malware Analysis</h4>
+          <ul>
+            <li>ANY.RUN</li>
+            <li>CrowdStrike Falcon Sandbox</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="skills-domain">
+        <h3>Languages & Tools</h3>
+        <ul>
+          <li>Python</li>
+          <li>Bash</li>
+          <li>Git</li>
+          <li>PostgreSQL</li>
+        </ul>
       </div>
     </section>
 
     <section>
-      <h2>Сертифікати</h2>
-      <div data-iframe-width="150" data-iframe-height="270"
-        data-share-badge-id="437588e7-4c17-485f-af00-338b1a942732"
-        data-share-badge-host="https://www.credly.com"></div>
-      <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+      <h2>Certifications</h2>
+      <div class="cert">
+        <h3>Google Cybersecurity Certificate</h3>
+        <p class="cert-issuer">Issued by Coursera</p>
+        <p><a href="https://www.credly.com/badges/437588e7-4c17-485f-af00-338b1a942732">Verify</a></p>
+      </div>
     </section>
   </main>
 </body>
